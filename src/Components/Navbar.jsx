@@ -1,5 +1,5 @@
 // File: Navbar.jsx
-// Author: Lex Albrandt
+// Author: Lex Albrandt, Lucas Cook
 // Purpose: This file is the react component for the site navbar
 
 // Imports
@@ -16,9 +16,14 @@ export default function Navbar() {
 	return (
 		<nav className="navbar">
 			<section className="navbar-container">
-				<h1>Clean Air Project</h1>
+				<div className="navbar-titles">
+					<h1 className="navbar-title">Change is in the Air</h1>
+					<p className="navbar-subtitle">
+						Community Air Quality Dashboard — Portland &amp; Gresham
+					</p>
+				</div>
 				<button
-					className="navbar-toggle"
+					className={isMenuOpen ? "navbar-toggle open" : "navbar-toggle"}
 					onClick={handleMenuToggle}
 					type="button"
 				>

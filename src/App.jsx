@@ -1,16 +1,13 @@
+
 import './App.css'
+import Navbar from './Components/Navbar'
 import SensorCard from './Components/SensorCard'
 import sensors from './mockData'
 
 function App() {
   return (
     <div className="app">
-      <header className="app__header">
-        <h1 className="app__title">Change Is in the Air</h1>
-        <p className="app__subtitle">
-          Community Air Quality Dashboard — Portland &amp; Gresham
-        </p>
-      </header>
+      <Navbar />
 
       <main className="app__main">
         <div className="app__filter-bar">
