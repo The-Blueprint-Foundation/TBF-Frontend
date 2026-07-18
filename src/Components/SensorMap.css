@@ -1,0 +1,13 @@
+.sensor-map {
+  height: 500px;
+  width: 100%;
+  border-radius: 12px;
+  position: relative;
+  z-index: 0;
+}
+
+.sensor-map .leaflet-pane,
+.sensor-map .leaflet-top,
+.sensor-map .leaflet-bottom {
+  z-index: 1 !important;
+}
