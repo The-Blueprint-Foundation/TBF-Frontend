@@ -99,6 +99,14 @@ Purpose: CSS styling for React Navbar component
 	cursor: pointer;
 }
 
+.navbar-container .navbar-menu li a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
 .navbar-container .navbar-menu.active {
 	max-height: 400px;
 }
