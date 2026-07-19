@@ -12,6 +12,7 @@ Purpose: CSS styling for React Navbar component
 	background: #185fa5;
 	position: sticky;
 	top: 0;
+	z-index: 1000;
 	box-shadow: 0 5px 5px black;
 }
 

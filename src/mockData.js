@@ -9,6 +9,8 @@ const sensors = [
     temperature: 68,
     humidity: 42,
     status: "good",
+    lat: 45.4720,
+    lng: -122.5773,
   },
   {
     id: 2,
@@ -20,6 +22,8 @@ const sensors = [
     temperature: 71,
     humidity: 55,
     status: "average",
+    lat: 45.5620,
+    lng: -122.5931,
   },
   {
     id: 3,
@@ -31,6 +35,8 @@ const sensors = [
     temperature: 74,
     humidity: 61,
     status: "poor",
+    lat: 45.5537,
+    lng: -122.5445,
   },
   {
     id: 4,
@@ -42,6 +48,8 @@ const sensors = [
     temperature: 63,
     humidity: 48,
     status: "good",
+    lat: 45.5001,
+    lng: -122.4302,
   },
   {
     id: 5,
@@ -53,6 +61,8 @@ const sensors = [
     temperature: 69,
     humidity: 53,
     status: "average",
+    lat: 45.5145,
+    lng: -122.5359,
   },
   {
     id: 6,
@@ -64,6 +74,8 @@ const sensors = [
     temperature: 66,
     humidity: 58,
     status: "poor",
+    lat: 45.5083,
+    lng: -122.5031,
   },
 ];
 

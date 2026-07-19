@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import SensorCard from "./Components/SensorCard";
+import SensorMap from "./Components/SensorMap";
 import sensors from "./mockData";
 import LearnMore from "./Components/LearnMoreSection/LearnMore";
 
@@ -34,6 +35,14 @@ function App() {
 				  <LearnMore />
         </section>
 
+				<div className="app__grid">
+					{sensors.map((sensor) => (
+						<SensorCard key={sensor.id} sensor={sensor} />
+					))}
+				</div>
+				<h2 className="app__section-title">Sensor Locations</h2>
+				<SensorMap sensors={sensors} />
+				<LearnMore />
 			</main>
 		</div>
 	);
