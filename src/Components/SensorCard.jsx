@@ -1,8 +1,7 @@
 import "./SensorCard.css";
 
 function SensorCard({ sensor }) {
-  const { name, type, location, pm25, pm10, temperature, humidity, status } =
-    sensor;
+  const { name, temperature, humidity, status } = sensor;
 
   const statusLabels = {
     good: "Good",
@@ -20,10 +19,6 @@ function SensorCard({ sensor }) {
     <div className={`sensor-card sensor-card--${status}`}>
       <div className="sensor-card__header">
         <h2 className="sensor-card__name">{name}</h2>
-        <div className="sensor-card__meta">
-          <span className="sensor-card__badge">{type}</span>
-          <span className="sensor-card__badge">{location}</span>
-        </div>
       </div>
 
       <div className={`sensor-card__status sensor-card__status--${status}`}>
@@ -36,16 +31,6 @@ function SensorCard({ sensor }) {
       </div>
 
       <div className="sensor-card__readings">
-        <div className="sensor-card__reading">
-          <span className="sensor-card__reading-label">PM2.5</span>
-          <span className="sensor-card__reading-value">{pm25}</span>
-          <span className="sensor-card__reading-unit">µg/m³</span>
-        </div>
-        <div className="sensor-card__reading">
-          <span className="sensor-card__reading-label">PM10</span>
-          <span className="sensor-card__reading-value">{pm10}</span>
-          <span className="sensor-card__reading-unit">µg/m³</span>
-        </div>
         <div className="sensor-card__reading">
           <span className="sensor-card__reading-label">Temp</span>
           <span className="sensor-card__reading-value">{temperature}</span>
