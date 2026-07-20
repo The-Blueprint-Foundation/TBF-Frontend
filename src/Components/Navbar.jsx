@@ -33,9 +33,9 @@ export default function Navbar() {
 				</button>
 				<ul className={isMenuOpen ? "navbar-menu active" : "navbar-menu"}>
 					<li><a href="#top" onClick={handleMenuToggle}>Home</a></li>
-					<li><a href="#neighborhood" onClick={handleMenuToggle}>Your Neighborhood AQI</a></li>
+					<li><a href="#map" onClick={handleMenuToggle}>AQI Map</a></li>
 					<li><a href="#learn-more" onClick={handleMenuToggle}>Learn More</a></li>
-					<li><a href="#foundation" onClick={handleMenuToggle}>The Blueprint Foundation</a></li>
+					<li><a href="#footer" onClick={handleMenuToggle}>The Blueprint Foundation</a></li>
 				</ul>
 			</section>
 		</nav>

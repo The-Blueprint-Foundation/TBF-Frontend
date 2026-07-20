@@ -25,12 +25,15 @@ function App() {
 					</div>
 				</div>
 
-				<section id="neighborhood" className="app__grid">
-					{sensors.map((sensor) => (
-						<SensorCard key={sensor.id} sensor={sensor} />
-					))}
-					<h2 className="app__section-title">Sensor Locations</h2>
-					<SensorMap sensors={sensors} />
+				<section id="map">
+          <div className="app__grid">
+            {sensors.map((sensor) => (
+              <SensorCard key={sensor.id} sensor={sensor} />
+            ))}
+          </div>
+          <div className="app__map-container">
+					  <SensorMap sensors={sensors} />
+				  </div>
 				</section>
 
 				<section id="learn-more">
