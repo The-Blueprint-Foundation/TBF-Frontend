@@ -1,24 +1,35 @@
 import "./SensorCard.css";
 
 function SensorCard({ sensor }) {
-  const { name, temperature, humidity, status } = sensor;
+  const { name, aqi, temperature, humidity, status } = sensor;
 
   const statusLabels = {
     good: "Good",
-    average: "Average",
-    poor: "Poor",
+    moderate: "Moderate",
+    sensitive: "Unhealthy for Sensitive Groups",
+    unhealthy: "Unhealthy",
+    veryunhealthy: "Very Unhealthy",
+    hazardous: "Hazardous",
   };
 
   const statusDescriptions = {
     good: "Air quality is satisfactory. Safe for all activities.",
-    average: "Air quality is acceptable. Sensitive groups should take care.",
-    poor: "Air quality is unhealthy. Limit time spent outdoors.",
+    moderate: "Acceptable air quality. Sensitive individuals should take note.",
+    sensitive: "Members of sensitive groups may experience health effects.",
+    unhealthy: "Everyone may begin to experience health effects.",
+    veryunhealthy: "Health alert — everyone may experience serious effects.",
+    hazardous: "Health warning of emergency conditions for everyone.",
   };
 
   return (
     <div className={`sensor-card sensor-card--${status}`}>
       <div className="sensor-card__header">
         <h2 className="sensor-card__name">{name}</h2>
+      </div>
+
+      <div className={`sensor-card__aqi sensor-card__aqi--${status}`}>
+        <span className="sensor-card__aqi-number">{aqi}</span>
+        <span className="sensor-card__aqi-label">AQI</span>
       </div>
 
       <div className={`sensor-card__status sensor-card__status--${status}`}>
