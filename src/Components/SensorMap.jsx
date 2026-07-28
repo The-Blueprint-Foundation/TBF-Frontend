@@ -1,6 +1,7 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Polygon } from "react-leaflet";
 import L from "leaflet";
 import "./SensorMap.css";
+import oregonBoundary from "./oregonBoundary";
 
 const statusColors = {
   good: "#3b6d11",
@@ -24,7 +25,34 @@ function createColoredIcon(color) {
 
 function SensorMap({ sensors }) {
   return (
-    <MapContainer center={[45.52, -122.55]} zoom={11} scrollWheelZoom={false} className="sensor-map">
+    <MapContainer
+      center={[44.0, -120.5]}
+      zoom={7}
+      minZoom={7}
+      maxBounds={[
+        [41.5, -125.2],
+        [46.5, -116.2],
+      ]}
+      maxBoundsViscosity={1.0}
+      scrollWheelZoom={false}
+      className="sensor-map"
+    >
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; OpenStreetMap contributors'
+      />
+      <Polygon
+        positions={[
+          [
+            [30, -140],
+            [30, -100],
+            [55, -100],
+            [55, -140],
+          ],
+          oregonBoundary,
+        ]}
+        pathOptions={{ color: "transparent", fillColor: "#ffffff", fillOpacity: 0.85 }}
+      />
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; OpenStreetMap contributors'
