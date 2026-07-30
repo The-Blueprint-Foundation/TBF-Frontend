@@ -15,18 +15,15 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.sensor-card--good {
-  border-left-color: #3b6d11;
-}
+/* Border colors per AQI level */
+.sensor-card--good { border-left-color: #00e400; }
+.sensor-card--moderate { border-left-color: #ffff00; }
+.sensor-card--sensitive { border-left-color: #ff7e00; }
+.sensor-card--unhealthy { border-left-color: #ff0000; }
+.sensor-card--veryunhealthy { border-left-color: #8f3f97; }
+.sensor-card--hazardous { border-left-color: #7e0023; }
 
-.sensor-card--average {
-  border-left-color: #856500;
-}
-
-.sensor-card--poor {
-  border-left-color: #c0392b;
-}
-
+/* Header */
 .sensor-card__header {
   display: flex;
   flex-direction: column;
@@ -40,69 +37,87 @@
   margin: 0;
 }
 
-.sensor-card__meta {
+/* AQI number — main focus */
+.sensor-card__aqi {
   display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0.75rem;
 }
 
-.sensor-card__badge {
-  font-size: 0.7rem;
+.sensor-card__aqi--good { background-color: #00e400; }
+.sensor-card__aqi--moderate { background-color: #ffff00; }
+.sensor-card__aqi--sensitive { background-color: #ff7e00; }
+.sensor-card__aqi--unhealthy { background-color: #ff0000; }
+.sensor-card__aqi--veryunhealthy { background-color: #8f3f97; }
+.sensor-card__aqi--hazardous { background-color: #7e0023; }
+
+.sensor-card__aqi-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.sensor-card__aqi--good .sensor-card__aqi-number,
+.sensor-card__aqi--moderate .sensor-card__aqi-number {
+  color: #333;
+}
+
+.sensor-card__aqi-label {
+  font-size: 0.75rem;
   font-weight: 500;
-  background-color: #d5e8f0;
-  color: #042c53;
-  padding: 2px 8px;
-  border-radius: 999px;
+  color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
 }
 
+.sensor-card__aqi--good .sensor-card__aqi-label,
+.sensor-card__aqi--moderate .sensor-card__aqi-label {
+  color: #333;
+}
+
+/* Status block — smaller, less prominent */
 .sensor-card__status {
   border-radius: 8px;
-  padding: 0.6rem 0.9rem;
+  padding: 0.4rem 0.7rem;
 }
 
-.sensor-card__status--good {
-  background-color: #eaf6e8;
-}
-
-.sensor-card__status--average {
-  background-color: #fdf8e1;
-}
-
-.sensor-card__status--poor {
-  background-color: #fdecea;
-}
+.sensor-card__status--good { background-color: #f0fdf0; }
+.sensor-card__status--moderate { background-color: #fefce8; }
+.sensor-card__status--sensitive { background-color: #fff7ed; }
+.sensor-card__status--unhealthy { background-color: #fef2f2; }
+.sensor-card__status--veryunhealthy { background-color: #faf0fb; }
+.sensor-card__status--hazardous { background-color: #fdf2f4; }
 
 .sensor-card__status-label {
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   display: block;
   margin-bottom: 0.2rem;
 }
 
-.sensor-card__status--good .sensor-card__status-label {
-  color: #3b6d11;
-}
-
-.sensor-card__status--average .sensor-card__status-label {
-  color: #856500;
-}
-
-.sensor-card__status--poor .sensor-card__status-label {
-  color: #c0392b;
-}
+.sensor-card__status--good .sensor-card__status-label { color: #166534; }
+.sensor-card__status--moderate .sensor-card__status-label { color: #854d0e; }
+.sensor-card__status--sensitive .sensor-card__status-label { color: #9a3412; }
+.sensor-card__status--unhealthy .sensor-card__status-label { color: #991b1b; }
+.sensor-card__status--veryunhealthy .sensor-card__status-label { color: #6b21a8; }
+.sensor-card__status--hazardous .sensor-card__status-label { color: #7e0023; }
 
 .sensor-card__status-description {
-  font-size: 0.78rem;
-  color: #555;
+  font-size: 0.72rem;
+  color: #666;
   margin: 0;
   line-height: 1.4;
 }
 
+/* Readings */
 .sensor-card__readings {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
 }
 
