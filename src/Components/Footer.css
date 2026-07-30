@@ -1,0 +1,23 @@
+/* 
+File: Footer.css
+Author: Lucas Cook
+Purpose: CSS styling for React Footer component
+ */
+
+.footer {
+    width: 100%;
+    background: #185fa5;
+}
+
+.foundation {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.footer-copyright {
+    color: rgb(250, 250, 250);
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}

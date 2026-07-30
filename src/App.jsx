@@ -4,6 +4,7 @@ import SensorCard from "./Components/SensorCard";
 import SensorMap from "./Components/SensorMap";
 import sensors from "./mockData";
 import LearnMore from "./Components/LearnMoreSection/LearnMore";
+import Footer from "./Components/Footer";
 
 function App() {
 	return (
@@ -39,6 +40,11 @@ function App() {
 				<section id="learn-more">
 					<LearnMore />
 				</section>
+
+        <section id="foundation">
+					<Footer />
+				</section>
+
 			</main>
 		</div>
 	);
