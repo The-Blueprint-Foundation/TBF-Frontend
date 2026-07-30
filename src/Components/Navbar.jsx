@@ -18,9 +18,6 @@ export default function Navbar() {
 			<section className="navbar-container">
 				<div className="navbar-titles">
 					<h1 className="navbar-title">Change is in the Air</h1>
-					<p className="navbar-subtitle">
-						Community Air Quality Dashboard — Portland &amp; Gresham
-					</p>
 				</div>
 				<button
 					className={isMenuOpen ? "navbar-toggle open" : "navbar-toggle"}
