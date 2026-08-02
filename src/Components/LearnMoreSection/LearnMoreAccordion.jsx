@@ -83,7 +83,7 @@ const accordionItems = [
 	},
 
 	{
-		title: "What are the categories of the AQI?",
+		title: "What are the severity categories of the AQI?",
 		body: (
 			<>
 				<p>
@@ -93,6 +93,17 @@ const accordionItems = [
 				</p>
 				<AQITable />
 			</>
+		),
+	},
+
+	{
+		title: "AQI Safety Recommendations",
+		body: (
+			<p>
+				Each severity category comes with guidelines for reducing your exposure
+				and protecting your health. The table below is based on recommendations
+				from the EPA.
+			</p>
 		),
 	},
 ];
