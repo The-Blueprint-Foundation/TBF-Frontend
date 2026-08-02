@@ -9,11 +9,10 @@ Purpose: CSS styling for React Navbar component
 	align-items: center;
 	justify-content: center;
 	height: 100px;
-	background: #185fa5;
+	background: var(--color-tbf6);
 	position: sticky;
 	top: 0;
 	z-index: 1000;
-	box-shadow: 0 5px 5px black;
 }
 
 .navbar-container {
@@ -26,19 +25,19 @@ Purpose: CSS styling for React Navbar component
 }
 
 .navbar-title {
-	font-family: "Nunito", sans-serif;
-	color: rgb(250, 250, 250);
-	font-size: 2.4rem;
+	font-family: "Roboto", sans-serif;
+	color: var(--color-tbf4);
+	font-size: 4rem;
 	font-weight: 700;
 	margin: 0;
+	text-align: center;
 }
 
-.navbar-subtitle {
-	font-family: "Nunito", sans-serif;
-	color: rgb(250, 250, 250);
-	font-size: 1.2rem;
-	margin: 0.25rem 0 0 0;
-	opacity: 0.9;
+.navbar-titles {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
 }
 
 /* Hamburger menu button */
@@ -113,4 +112,14 @@ Purpose: CSS styling for React Navbar component
 
 .navbar-container .navbar-menu li:hover {
 	background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Media queries */
+@media (max-width: 480px) {
+	.navbar-title {
+		font-size: 2rem;
+	}
+	.navbar-container .navbar-menu {
+		margin-top: -0.2rem;
+	}
 }
