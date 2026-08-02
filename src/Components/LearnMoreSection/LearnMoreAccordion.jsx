@@ -31,17 +31,7 @@ const accordionItems = [
 		title: "What is Particulate Matter?",
 		body: (
 			<>
-				<p>
-					According to the{" "}
-					<a
-						href="https://www.epa.gov/pm-pollution/particulate-matter-pm-basics"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						U.S. Environmental Protection Agency
-					</a>
-					:
-				</p>
+				<p>According to the U.S. Environmental Protection Agency:</p>
 				<p>
 					"PM stands for particulate matter (also called particle pollution):
 					the term for a mixture of solid particles and liquid droplets found in
