@@ -26,8 +26,8 @@ function createColoredIcon(color) {
 function SensorMap({ sensors }) {
   return (
     <MapContainer
-      center={[44.0, -120.5]}
-      zoom={7}
+      center={[45.5001, -122.4302]}
+      zoom={11}
       minZoom={7}
       maxBounds={[
         [41.5, -125.2],
