@@ -5,6 +5,7 @@
 import Accordion from "react-bootstrap/Accordion";
 import PMScaleGraphic from "./PMScaleGraphic";
 import AQITable from "./AQITable";
+import AQISafetTable from "./AQISafety";
 
 const accordionItems = [
 	{
@@ -30,17 +31,7 @@ const accordionItems = [
 		title: "What is Particulate Matter?",
 		body: (
 			<>
-				<p>
-					According to the{" "}
-					<a
-						href="https://www.epa.gov/pm-pollution/particulate-matter-pm-basics"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						U.S. Environmental Protection Agency
-					</a>
-					:
-				</p>
+				<p>According to the U.S. Environmental Protection Agency:</p>
 				<p>
 					"PM stands for particulate matter (also called particle pollution):
 					the term for a mixture of solid particles and liquid droplets found in
@@ -72,6 +63,8 @@ const accordionItems = [
 		title: "How is AQI Calculated?",
 		body: (
 			<>
+				{" "}
+				<div className="table-cell">N/A</div>
 				<p>
 					The AQI (Air Quality Index) is calculated by converting the measured
 					concentration of key air pollutants (PM2.5, PM10, etc) into an index
@@ -83,7 +76,7 @@ const accordionItems = [
 	},
 
 	{
-		title: "What are the categories of the AQI?",
+		title: "What are the severity categories of the AQI?",
 		body: (
 			<>
 				<p>
@@ -92,6 +85,20 @@ const accordionItems = [
 					value ranges:
 				</p>
 				<AQITable />
+			</>
+		),
+	},
+
+	{
+		title: "AQI Safety Recommendations",
+		body: (
+			<>
+				<p>
+					Each severity category comes with guidelines for reducing your
+					exposure and protecting your health. The table below is based on
+					recommendations from the EPA.
+				</p>
+				<AQISafetTable />
 			</>
 		),
 	},
