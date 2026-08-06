@@ -4,12 +4,12 @@ import "./SensorMap.css";
 import oregonBoundary from "./oregonBoundary";
 
 const statusColors = {
-  good: "#166534",
-  moderate: "#854d0e",
-  sensitive: "#9a3412",
-  unhealthy: "#991b1b",
-  veryunhealthy: "#6b21a8",
-  hazardous: "#7e0023",
+  good: "var(--color-aqi-good)",
+  moderate: "var(--color-aqi-mod)",
+  sensitive: "var(--color-aqi-unhealthy-sens)",
+  unhealthy: "var(--color-aqi-unhealthy)",
+  veryunhealthy: "var(--color-aqi-v-unhealthy)",
+  hazardous: "var(--color-aqi-haz)",
 };
 
 const statusLabels = {
