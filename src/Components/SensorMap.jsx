@@ -4,15 +4,21 @@ import "./SensorMap.css";
 import oregonBoundary from "./oregonBoundary";
 
 const statusColors = {
-  good: "#3b6d11",
-  average: "#856500",
-  poor: "#c0392b",
+  good: "var(--color-aqi-good)",
+  moderate: "var(--color-aqi-mod)",
+  sensitive: "var(--color-aqi-unhealthy-sens)",
+  unhealthy: "var(--color-aqi-unhealthy)",
+  veryunhealthy: "var(--color-aqi-v-unhealthy)",
+  hazardous: "var(--color-aqi-haz)",
 };
 
 const statusLabels = {
   good: "Good",
-  average: "Average",
-  poor: "Poor",
+  moderate: "Moderate",
+  sensitive: "Sensitive Groups",
+  unhealthy: "Unhealthy",
+  veryunhealthy: "Very Unhealthy",
+  hazardous: "Hazardous",
 };
 
 function createColoredIcon(color) {
@@ -53,10 +59,6 @@ function SensorMap({ sensors }) {
         ]}
         pathOptions={{ color: "transparent", fillColor: "#ffffff", fillOpacity: 0.85 }}
       />
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; OpenStreetMap contributors'
-      />
       {sensors
         .filter((sensor) => sensor.lat && sensor.lng)
         .map((sensor) => (
@@ -70,8 +72,8 @@ function SensorMap({ sensors }) {
               <br />
               {sensor.type} &middot; {sensor.location}
               <br />
-              PM2.5: {sensor.pm25} µg/m³<br />
-              PM10: {sensor.pm10} µg/m³<br />
+              AQI: {sensor.aqi}
+              <br />
               Temp: {sensor.temperature}°F, Humidity: {sensor.humidity}%
               <br />
               Status:{" "}
