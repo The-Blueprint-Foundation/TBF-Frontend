@@ -1,4 +1,5 @@
 import "./SensorCard.css";
+import "../../css/colors.css";
 
 function SensorCard({ sensor }) {
   const { name, aqi, temperature, humidity, status } = sensor;

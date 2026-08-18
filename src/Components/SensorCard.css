@@ -16,12 +16,12 @@
 }
 
 /* Border colors per AQI level */
-.sensor-card--good { border-left-color: #00e400; }
-.sensor-card--moderate { border-left-color: #ffff00; }
-.sensor-card--sensitive { border-left-color: #ff7e00; }
-.sensor-card--unhealthy { border-left-color: #ff0000; }
-.sensor-card--veryunhealthy { border-left-color: #8f3f97; }
-.sensor-card--hazardous { border-left-color: #7e0023; }
+.sensor-card--good { border-left-color: var(--color-aqi-good); }
+.sensor-card--moderate { border-left-color: var(--color-aqi-mod); }
+.sensor-card--sensitive { border-left-color: var(--color-aqi-unhealthy-sens); }
+.sensor-card--unhealthy { border-left-color: var(--color-aqi-unhealthy); }
+.sensor-card--veryunhealthy { border-left-color: var(--color-aqi-v-unhealthy); }
+.sensor-card--hazardous { border-left-color: var(--color-aqi-haz); }
 
 /* Header */
 .sensor-card__header {
@@ -33,7 +33,7 @@
 .sensor-card__name {
   font-size: 1rem;
   font-weight: 600;
-  color: #042c53;
+  color: var(--color-tbf8);
   margin: 0;
 }
 
@@ -47,12 +47,12 @@
   padding: 0.75rem;
 }
 
-.sensor-card__aqi--good { background-color: #00e400; }
-.sensor-card__aqi--moderate { background-color: #ffff00; }
-.sensor-card__aqi--sensitive { background-color: #ff7e00; }
-.sensor-card__aqi--unhealthy { background-color: #ff0000; }
-.sensor-card__aqi--veryunhealthy { background-color: #8f3f97; }
-.sensor-card__aqi--hazardous { background-color: #7e0023; }
+.sensor-card__aqi--good { background-color: var(--color-aqi-good); }
+.sensor-card__aqi--moderate { background-color: var(--color-aqi-mod); }
+.sensor-card__aqi--sensitive { background-color: var(--color-aqi-unhealthy-sens); }
+.sensor-card__aqi--unhealthy { background-color: var(--color-aqi-unhealthy); }
+.sensor-card__aqi--veryunhealthy { background-color: var(--color-aqi-v-unhealthy); }
+.sensor-card__aqi--hazardous { background-color: var(--color-aqi-haz); }
 
 .sensor-card__aqi-number {
   font-size: 2.5rem;
@@ -80,7 +80,7 @@
   color: #333;
 }
 
-/* Status block — smaller, less prominent */
+/* Status block */
 .sensor-card__status {
   border-radius: 8px;
   padding: 0.4rem 0.7rem;
@@ -141,7 +141,7 @@
 .sensor-card__reading-value {
   font-size: 1rem;
   font-weight: 700;
-  color: #185fa5;
+  color: var(--color-tbf1);
 }
 
 .sensor-card__reading-unit {
