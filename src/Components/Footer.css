@@ -9,13 +9,20 @@ footer {
 }
 
 .foundation {
-	background: var(--color-tbf6);
+	background: var(--color-tbf8);
 	padding: 1.5rem 1.5rem 2.5rem;
 	text-align: center;
 }
 
+.foundation-logo {
+	display: block;
+	height: 70px;
+	width: auto;
+	margin: 0 auto 1rem;
+}
+
 .foundation-title {
-	color: var(--color-tbf4);
+	color: rgb(250, 250, 250);
 	font-size: 1.8rem;
 	margin: 0 0 1.5rem 0;
 }
@@ -27,8 +34,8 @@ footer {
 }
 
 .foundation-button {
-	color: var(--color-tbf4);
-	border: 2px solid var(--color-tbf4);
+	color: rgb(250, 250, 250);
+	border: 2px solid rgb(250, 250, 250);
 	border-radius: 8px;
 	padding: 0.6rem 1.5rem;
 	text-decoration: none;
@@ -37,14 +44,14 @@ footer {
 }
 
 .foundation-button:hover {
-	background: var(--color-tbf4);
-	color: var(--color-tbf6);
+	background: var(--color-tbf1);
+	color: rgb(250, 250, 250);
 }
 
 .footer-copyright {
 	width: 100%;
-	background: var(--color-tbf1);
-	color: var(--color-tbf8);
+	background: rgb(0, 0, 0);
+	color: rgb(250, 250, 250);
 	text-align: center;
 	padding: 2px;
 	font-size: 0.5rem;
