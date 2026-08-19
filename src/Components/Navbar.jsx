@@ -5,6 +5,7 @@
 // Imports
 import "./Navbar.css";
 import { useState } from "react";
+import blueprintLogo from "../assets/Blueprint_Foundation_Logo.png";
 
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +17,11 @@ export default function Navbar() {
 	return (
 		<nav className="navbar">
 			<section className="navbar-container">
+				<img
+					src={blueprintLogo}
+					alt="The Blueprint Foundation logo"
+					className="navbar-logo"
+				/>
 				<div className="navbar-titles">
 					<h1 className="navbar-title">Change is in the Air</h1>
 				</div>
