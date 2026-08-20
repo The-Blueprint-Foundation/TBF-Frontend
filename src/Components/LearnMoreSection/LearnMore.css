@@ -11,6 +11,7 @@
 .learn-more-container {
 	margin: 3rem auto 0;
 	width: min(100%, 48rem);
+	font-family: Roboto;
 }
 
 .accordion-button {
@@ -41,27 +42,45 @@
 	border: 1px solid black;
 }
 
-.table-row-header {
+.learn-more-container .aqi-table .table-cell.table-row-header,
+.learn-more-container .aqi-safety-table .table-cell.table-row-header {
 	font-weight: 600;
+	color: white;
+	background-color: var(--color-tbf8);
 }
 
-.learn-more-container .aqi-table .table-cell {
-	color: black;
-	border: 1px solid black;
-	text-align: center;
+.learn-more-container .accordion-button:focus {
+	box-shadow: none;
 }
 
+.learn-more-container .accordion-body {
+	background-color: var(--color-tbf4);
+}
+
+.learn-more-container .accordion-button.collapsed {
+	background-color: var(--color-tbf3);
+}
+
+.learn-more-container .accordion-button:not(.collapsed) {
+	background-color: var(--color-tbf5);
+}
+
+.learn-more-container .aqi-table .table-cell,
 .learn-more-container .aqi-safety-table .table-cell {
 	color: black;
 	border: 1px solid black;
 	text-align: center;
+	background-color: white;
+	padding: 0.5rem;
 }
 
-.table-row-good.cat {
+.aqi-safety-table .table-row-good.cat,
+.aqi-table .table-row-good.cat {
 	background: var(--color-aqi-good);
 }
 
-.table-row-mod.cat {
+.aqi-safety-table .table-row-mod.cat,
+.aqi-table .table-row-mod.cat {
 	background: var(--color-aqi-mod);
 }
 
