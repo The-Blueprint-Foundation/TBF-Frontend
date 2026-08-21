@@ -6,7 +6,7 @@ import { Fragment } from "react";
 
 const safetyRows = [
 	{
-		category: "Good (0-50)",
+		category: "Good",
 		categoryClass: "table-row-good",
 		concern: "N/A",
 		actions: "No action needed",

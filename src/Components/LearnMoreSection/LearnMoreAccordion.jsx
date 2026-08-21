@@ -64,7 +64,7 @@ const accordionItems = [
 		body: (
 			<>
 				{" "}
-				<div className="table-cell">N/A</div>
+				<div className="table-cell"></div>
 				<p>
 					The AQI (Air Quality Index) is calculated by converting the measured
 					concentration of key air pollutants (PM2.5, PM10, etc) into an index
