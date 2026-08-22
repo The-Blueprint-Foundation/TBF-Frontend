@@ -1,16 +1,56 @@
-# React + Vite
+# Change is in the Air
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite web application built for **The Blueprint Foundation** to display live air quality index (AQI) data from field sensors, along with educational resources about air quality and particulate matter.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* [Overview](#overview)
+* [Tech Stack](#tech-stack)
+* [Prerequisites](#prerequisites)
+* [Getting Started](#getting-started)
+* [Available Scripts](#available-scripts)
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+"Change is in the Air" gives visitors a real-time view of local air quality by pulling data from multiple sensors and displaying it as an AQI map/dashboard. The site also includes a "Learn More" section with expandable FAQ-style entries covering:
 
-## Expanding the ESLint configuration
+* What the air quality sensors measure
+* What particulate matter (PM) is
+* How AQI is calculated
+* AQI severity categories
+* AQI safety recommendations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The site is built and maintained on behalf of **The Blueprint Foundation**, whose branding (logo, name, links) appears in the site header/footer.
+
+## Tech Stack
+
+* **React** – UI library
+* **Vite** – build tool / dev server
+* **CSS** – component-scoped stylesheets (`Component.css` alongside `Component.jsx`)
+
+## Prerequisites
+
+* [Node.js](https://nodejs.org/) (LTS recommended)
+* npm (comes bundled with Node.js)
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   cd <repo-folder>
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the local dev server:
+   ```bash
+   npm run dev
+   ```
+4. Open the URL Vite prints in the terminal (typically `http://localhost:5173`).
+
+## Available Scripts
+
+* 'npm run dev' – starts the app locally for development
+* 'npm run build' – builds the app for production
